@@ -54,10 +54,19 @@ Test this function by hand in the console to get it working, and when you think 
 
 function sumAndMultiply(a, b, c) { //eslint-disable-line
 // TODO: Write your code here
+//to sum a, b, c:
+var outputOne = sum(a, b); //outputOne is the result of the return from the sum(a,b) function, ie. [11, The sum of 4 and 7 is 11]
+var outputTwo = sum(outputOne[0], c); //I only want [0] of the returned array from the sum(a,b) function.  So, outputTwo is the sum of [0] plus the passed in parameter c.
+//to multiply a, b, c:
+var outputThree = multiply(a, b);
+var outputFour = multiply(outputThree[0], c);
+var messageOne = `${a} and ${b} and ${c} sum to ${outputTwo[0]}.`;
+var messageTwo = `The product of ${a} and ${b} and ${c} is ${outputFour[0]}.`;
+return [outputTwo[0], outputFour[0], messageOne, messageTwo] //outputTwo and outputFour returned an array and I only want the sum and product of each that exist at index 0.
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
