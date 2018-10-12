@@ -85,11 +85,15 @@ var testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(testArray) { //eslint-disable-line
   // TODO: Write your code here
+  var outputFive = sum(testArray[0], testArray[1]);
+  var outputSix = sum(outputFive[0], testArray[2]);
+  //return [// 1. sum of numbers in array, 2. string that matches above statement using values that were input into the function]
+  return [outputSix[0], `${testArray} was passed in as an array of numbers, and ${outputSix[0]} is their sum.`]
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
